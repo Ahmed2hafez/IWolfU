@@ -7,6 +7,23 @@ var stars = 500;
 var colorrange = [0, 60, 240];
 var starArray = [];
 
+// 🎵 Background Music
+const bgMusic = new Audio("Eyedress-(Something About You).mp3");
+bgMusic.loop = true;
+bgMusic.volume = 0.7;
+
+// Try autoplay (may be blocked)
+bgMusic.play().catch(() => {
+    console.log("Autoplay blocked. Waiting for interaction...");
+});
+
+// Start music on first click (guaranteed to work)
+document.addEventListener("click", function startMusic() {
+    bgMusic.play();
+    document.removeEventListener("click", startMusic);
+});
+
+
 function getRandom(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
