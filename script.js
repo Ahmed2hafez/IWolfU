@@ -214,7 +214,7 @@ function drawText() {
     }
 
     if(frameNumber >= 3000 && frameNumber < 99999){
-        context.fillStyle = `rgba(45, 45, 255, ${thirdOpacity})`;
+        context.fillStyle = `rgba(255, 105, 180, ${thirdOpacity})`;
         context.fillText("I Wolf U, Mickey. My Love Quinn", canvas.width/2, (canvas.height/2 + 120));
         thirdOpacity = thirdOpacity + 0.01;
 
